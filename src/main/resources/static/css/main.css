@@ -123,6 +123,12 @@ input[type="file"] {
     border-bottom: 1px solid #e8e8e8;
 }
 
+.list-files {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 5px solid red;
+}
+
 .upload-response {
     overflow-x: hidden;
     word-break: break-all;
