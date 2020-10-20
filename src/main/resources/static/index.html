@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>License File Upload to Salesforce</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<noscript>
+    <h2>Sorry! Your browser doesn't support Javascript</h2>
+</noscript>
+<div class="upload-container">
+    <div class="upload-header">
+        <h2>License File Upload via Rest API Demo</h2>
+    </div>
+    <div class="upload-content">
+        <div class="single-upload">
+            <h3>Upload Single File</h3>
+            <form id="singleUploadForm" name="singleUploadForm">
+                <input id="singleUploadForm" type="file" name="file" class="file-input" required />
+                <button type="submit" class="primary submit-btn">Submit</button>
+            </form>
+            <div class="upload-response">
+                <div id="singleFileUploadError"></div>
+                <div id="singleFileUploadSuccess"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/main.js" ></script>
+</body>
+</html>
