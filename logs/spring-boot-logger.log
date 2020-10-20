@@ -1,0 +1,567 @@
+2020-10-19 14:38:29,545 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 5115 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 14:38:29,549 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 14:38:29,550 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 14:38:30,317 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 14:38:30,325 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 14:38:30,326 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 14:38:30,326 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 14:38:30,388 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 14:38:30,388 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 790 ms
+2020-10-19 14:38:30,429 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 14:38:30,526 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 14:38:30,621 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 14:38:30,670 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 14:38:30,689 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 14:38:30,702 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.583 seconds (JVM running for 2.227)
+2020-10-19 14:38:44,127 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 14:38:44,128 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 14:38:44,135 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 6 ms
+2020-10-19 14:38:57,759 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class org.springframework.http.ResponseEntity$DefaultBuilder cannot be cast to class org.springframework.http.ResponseEntity (org.springframework.http.ResponseEntity$DefaultBuilder and org.springframework.http.ResponseEntity are in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class org.springframework.http.ResponseEntity$DefaultBuilder cannot be cast to class org.springframework.http.ResponseEntity (org.springframework.http.ResponseEntity$DefaultBuilder and org.springframework.http.ResponseEntity are in unnamed module of loader 'app')
+	at org.gene.filedemo.controller.FileController.listAllFiles(FileController.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-10-19 14:46:56,103 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 14:47:04,343 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 5153 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 14:47:04,346 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 14:47:04,346 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 14:47:05,062 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 14:47:05,072 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 14:47:05,072 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 14:47:05,073 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 14:47:05,143 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 14:47:05,144 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 756 ms
+2020-10-19 14:47:05,187 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 14:47:05,283 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 14:47:05,381 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 14:47:05,431 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 14:47:05,449 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 14:47:05,461 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.481 seconds (JVM running for 2.083)
+2020-10-19 14:47:18,858 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 14:47:18,859 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 14:47:18,865 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 6 ms
+2020-10-19 14:47:18,976 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 14:47:18,993 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 14:47:18,994 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 14:47:18,999 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 14:47:18,999 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 14:47:19,001 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 14:47:19,002 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 14:47:19,005 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 14:50:14,698 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 14:50:21,904 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 5173 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 14:50:21,907 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 14:50:21,907 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 14:50:22,645 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 14:50:22,653 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 14:50:22,654 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 14:50:22,654 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 14:50:22,713 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 14:50:22,713 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 760 ms
+2020-10-19 14:50:22,755 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 14:50:22,849 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 14:50:22,946 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 14:50:22,995 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 14:50:23,013 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 14:50:23,024 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.481 seconds (JVM running for 2.076)
+2020-10-19 14:50:29,267 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 14:50:29,269 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-19 14:50:29,274 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 5 ms
+2020-10-19 14:50:29,366 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is .DS_Store
+2020-10-19 14:50:29,385 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 14:50:29,386 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 14:50:29,389 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: text/plain
+2020-10-19 14:50:29,390 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 14:50:29,392 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: text/plain
+2020-10-19 14:50:29,393 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 14:50:29,394 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: application/zip
+2020-10-19 15:06:56,408 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 15:07:04,247 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 5245 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 15:07:04,250 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 15:07:04,251 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 15:07:04,903 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 15:07:04,914 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 15:07:04,915 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 15:07:04,915 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 15:07:04,980 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 15:07:04,981 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 688 ms
+2020-10-19 15:07:05,022 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 15:07:05,119 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 15:07:05,213 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 15:07:05,264 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 15:07:05,283 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 15:07:05,294 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.397 seconds (JVM running for 2.033)
+2020-10-19 15:07:36,068 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 15:07:36,069 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 15:07:36,076 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 6 ms
+2020-10-19 15:07:36,170 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 15:07:36,185 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 15:07:36,189 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='.DS_Store', fileSize=999695822848, fileType='application/octet-stream'}
+2020-10-19 15:07:36,190 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 15:07:36,192 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 15:07:36,194 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=999695822848, fileType='text/plain'}
+2020-10-19 15:07:36,194 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 15:07:36,196 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 15:07:36,197 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=999695822848, fileType='text/plain'}
+2020-10-19 15:07:36,198 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 15:07:36,199 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 15:07:36,200 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='Test_-_Validation_2020.zip', fileSize=999695822848, fileType='application/zip'}
+2020-10-19 15:08:28,672 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 15:10:13,021 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 5297 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 15:10:13,024 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 15:10:13,025 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 15:10:13,771 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 15:10:13,780 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 15:10:13,781 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 15:10:13,782 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 15:10:13,847 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 15:10:13,848 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 782 ms
+2020-10-19 15:10:13,893 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 15:10:13,995 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 15:10:14,099 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 15:10:14,153 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 15:10:14,173 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 15:10:14,186 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.559 seconds (JVM running for 2.181)
+2020-10-19 15:10:22,435 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 15:10:22,436 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 15:10:22,442 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 6 ms
+2020-10-19 15:10:22,540 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 15:10:22,555 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 15:10:22,559 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='.DS_Store', fileSize=6148, fileType='application/octet-stream'}
+2020-10-19 15:10:22,560 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 15:10:22,563 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 15:10:22,564 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 15:10:22,565 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 15:10:22,567 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 15:10:22,568 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 15:10:22,568 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 15:10:22,570 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 15:10:22,571 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='Test_-_Validation_2020.zip', fileSize=516, fileType='application/zip'}
+2020-10-19 15:24:30,017 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 19:16:32,119 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6069 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 19:16:32,122 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 19:16:32,123 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 19:16:32,819 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 19:16:32,830 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 19:16:32,831 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 19:16:32,831 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 19:16:32,898 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 19:16:32,898 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 732 ms
+2020-10-19 19:16:32,946 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 19:16:33,032 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 19:16:33,126 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 19:16:33,176 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 19:16:33,195 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 19:16:33,206 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.514 seconds (JVM running for 2.508)
+2020-10-19 19:16:51,010 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 19:16:51,010 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 19:16:51,016 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 5 ms
+2020-10-19 19:16:51,127 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 19:16:51,129 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 19:16:51,132 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 19:16:51,134 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 19:16:51,137 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 19:16:51,139 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 19:16:51,140 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 19:16:51,142 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 19:16:51,143 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 19:16:51,144 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 19:48:13,806 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 19:50:06,420 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6176 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 19:50:06,423 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 19:50:06,424 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 19:50:07,126 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 19:50:07,136 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 19:50:07,136 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 19:50:07,136 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 19:50:07,205 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 19:50:07,206 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 741 ms
+2020-10-19 19:50:07,245 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 19:50:07,337 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 19:50:07,434 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 19:50:07,488 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 19:50:07,510 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 19:50:07,529 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.468 seconds (JVM running for 1.987)
+2020-10-19 19:52:41,857 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 19:52:41,858 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 19:52:41,865 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 6 ms
+2020-10-19 19:52:41,970 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 19:52:41,974 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 19:52:41,976 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 19:52:41,977 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 19:52:41,979 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 19:52:41,981 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 19:52:41,982 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 19:52:41,983 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 19:52:41,985 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 19:52:41,986 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 19:54:20,106 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:03:54,956 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6236 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 20:03:54,959 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 20:03:54,960 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 20:03:55,649 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 20:03:55,658 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:03:55,658 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 20:03:55,659 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 20:03:55,721 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 20:03:55,721 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 720 ms
+2020-10-19 20:03:55,763 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 20:03:55,859 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:03:55,957 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 20:03:56,007 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:03:56,026 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 20:03:56,038 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.443 seconds (JVM running for 2.016)
+2020-10-19 20:04:19,245 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 20:04:19,246 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 20:04:19,253 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 7 ms
+2020-10-19 20:04:19,361 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:04:19,366 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:04:19,369 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:04:19,370 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:04:19,372 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:04:19,374 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:04:19,375 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:04:19,376 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:04:19,378 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:04:19,379 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:04:44,920 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:09:58,065 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6267 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 20:09:58,068 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 20:09:58,068 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 20:09:58,753 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 20:09:58,763 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:09:58,763 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 20:09:58,763 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 20:09:58,821 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 20:09:58,821 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 713 ms
+2020-10-19 20:09:58,858 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 20:09:58,947 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:09:59,039 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 20:09:59,087 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:09:59,105 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 20:09:59,117 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.396 seconds (JVM running for 1.937)
+2020-10-19 20:10:13,086 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 20:10:13,087 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 20:10:13,093 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 6 ms
+2020-10-19 20:10:13,197 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:10:13,201 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:10:13,202 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:10:13,204 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:10:13,213 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at org.gene.filedemo.service.FileStorageService.listFilesInStorage(FileStorageService.java:74)
+	at org.gene.filedemo.controller.FileController.listAllFiles(FileController.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-10-19 20:12:44,747 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:12:52,255 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6282 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 20:12:52,258 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 20:12:52,258 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 20:12:52,928 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 20:12:52,937 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:12:52,938 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 20:12:52,938 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 20:12:52,996 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 20:12:52,997 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 699 ms
+2020-10-19 20:12:53,036 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 20:12:53,146 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:12:53,236 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 20:12:53,280 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:12:53,297 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 20:12:53,307 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.398 seconds (JVM running for 1.945)
+2020-10-19 20:13:05,092 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 20:13:05,093 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 20:13:05,097 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+2020-10-19 20:13:05,212 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:13:05,215 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:13:05,221 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:13:05,223 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:13:05,224 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:13:05,226 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:13:05,228 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:13:05,228 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:13:05,230 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:13:05,231 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:13:23,151 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:14:53,409 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6295 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 20:14:53,412 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 20:14:53,413 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 20:14:54,017 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 20:14:54,024 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:14:54,024 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 20:14:54,024 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 20:14:54,071 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 20:14:54,071 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 625 ms
+2020-10-19 20:14:54,104 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 20:14:54,193 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:14:54,271 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 20:14:54,311 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:14:54,328 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 20:14:54,339 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.271 seconds (JVM running for 1.81)
+2020-10-19 20:16:03,263 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 20:16:03,264 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-19 20:16:03,270 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 6 ms
+2020-10-19 20:16:03,376 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:16:03,379 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:16:03,380 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - results size is 0
+2020-10-19 20:16:03,381 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:16:03,383 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:16:03,384 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:16:03,384 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - results size is 1
+2020-10-19 20:16:03,386 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:16:03,387 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:16:03,387 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:16:03,388 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - results size is 2
+2020-10-19 20:16:03,389 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:16:03,390 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:16:03,390 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-1] listFilesInStorage - results size is 3
+2020-10-19 20:17:01,658 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:19:24,217 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6321 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 20:19:24,219 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 20:19:24,220 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 20:19:24,825 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 20:19:24,832 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:19:24,833 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 20:19:24,833 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 20:19:24,886 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 20:19:24,886 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 632 ms
+2020-10-19 20:19:24,923 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 20:19:25,015 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:19:25,099 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 20:19:25,149 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:19:25,165 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 20:19:25,176 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.317 seconds (JVM running for 1.886)
+2020-10-19 20:19:36,250 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 20:19:36,251 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 20:19:36,255 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+2020-10-19 20:19:36,270 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - There are 4 files
+2020-10-19 20:19:36,355 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:19:36,359 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:19:36,362 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:19:36,364 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:19:36,365 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:19:36,367 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:19:36,368 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:19:36,368 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:19:36,369 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:19:36,370 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:19:36,371 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - results size is 4
+2020-10-19 20:21:57,721 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:22:05,427 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6441 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 20:22:05,431 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 20:22:05,432 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 20:22:06,068 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 20:22:06,075 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:22:06,075 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 20:22:06,076 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 20:22:06,127 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 20:22:06,127 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 653 ms
+2020-10-19 20:22:06,163 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 20:22:06,249 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:22:06,330 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 20:22:06,375 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:22:06,390 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 20:22:06,401 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.32 seconds (JVM running for 1.841)
+2020-10-19 20:22:23,680 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 20:22:23,681 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-19 20:22:23,686 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+2020-10-19 20:22:23,702 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - There are 4 files
+2020-10-19 20:22:23,789 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:22:23,792 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:22:23,794 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:22:23,797 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:22:23,798 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:22:23,800 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:22:23,801 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:22:23,801 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:22:23,804 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:22:23,804 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:22:23,805 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - results size is 2
+2020-10-19 20:26:56,552 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:34:28,574 INFO org.springframework.boot.StartupInfoLogger [main] Starting FileDemoApplication on clarences-mbp.lan with PID 6593 (/Users/clarencebarringer/IdeaProjects/file-demo/target/classes started by clarencebarringer in /Users/clarencebarringer/IdeaProjects/file-demo)
+2020-10-19 20:34:28,578 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-19 20:34:28,578 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-19 20:34:29,302 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-19 20:34:29,309 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:34:29,310 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-19 20:34:29,311 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-19 20:34:29,365 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-19 20:34:29,366 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 750 ms
+2020-10-19 20:34:29,406 DEBUG org.gene.filedemo.service.FileStorageService [main] FileStorageService - fileStorageLocation is /Users/clarencebarringer/IdeaProjects/file-demo/fileStorage
+2020-10-19 20:34:29,511 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 20:34:29,594 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-19 20:34:29,637 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-19 20:34:29,652 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-19 20:34:29,662 INFO org.springframework.boot.StartupInfoLogger [main] Started FileDemoApplication in 1.462 seconds (JVM running for 2.007)
+2020-10-19 20:34:35,585 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-19 20:34:35,586 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-10-19 20:34:35,592 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 6 ms
+2020-10-19 20:34:45,766 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - There are 4 files
+2020-10-19 20:34:45,849 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:34:45,852 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:34:45,854 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:34:45,855 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:34:45,856 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:34:45,858 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:34:45,859 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:34:45,860 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:34:45,862 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:34:45,863 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:34:45,863 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-2] listFilesInStorage - results size is 2
+2020-10-19 20:56:22,952 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - There are 4 files
+2020-10-19 20:56:22,958 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:56:22,960 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:56:22,962 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:56:22,964 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:22,964 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:22,965 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:56:22,966 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:22,967 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:22,969 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:56:22,970 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:56:22,971 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - results size is 2
+2020-10-19 20:56:24,922 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - There are 4 files
+2020-10-19 20:56:24,925 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:56:24,928 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:56:24,929 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:56:24,930 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:24,931 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:24,932 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:56:24,933 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:24,934 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:24,935 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:56:24,937 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:56:24,937 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-6] listFilesInStorage - results size is 2
+2020-10-19 20:56:25,874 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - There are 4 files
+2020-10-19 20:56:25,876 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:56:25,877 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:56:25,879 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:56:25,880 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:25,880 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:25,881 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:56:25,882 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:25,882 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:25,883 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:56:25,884 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:56:25,885 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-7] listFilesInStorage - results size is 2
+2020-10-19 20:56:27,074 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - There are 4 files
+2020-10-19 20:56:27,076 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - file name is .DS_Store
+2020-10-19 20:56:27,077 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 20:56:27,078 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 20:56:27,079 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:27,080 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:27,081 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 20:56:27,082 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - tika file type: text/plain
+2020-10-19 20:56:27,082 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 20:56:27,083 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 20:56:27,084 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - tika file type: application/zip
+2020-10-19 20:56:27,084 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-8] listFilesInStorage - results size is 2
+2020-10-19 21:02:19,293 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - There are 4 files
+2020-10-19 21:02:19,295 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is .DS_Store
+2020-10-19 21:02:19,297 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: application/octet-stream
+2020-10-19 21:02:19,298 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic
+2020-10-19 21:02:19,300 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: text/plain
+2020-10-19 21:02:19,300 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_55.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 21:02:19,302 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic
+2020-10-19 21:02:19,303 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: text/plain
+2020-10-19 21:02:19,303 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - LicenseFile{fileName='GE_Healthcare_HCIT.QC12_53.eApprove_TEST.lic', fileSize=359, fileType='text/plain'}
+2020-10-19 21:02:19,304 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - file name is Test_-_Validation_2020.zip
+2020-10-19 21:02:19,305 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - tika file type: application/zip
+2020-10-19 21:02:19,306 TRACE org.gene.filedemo.service.FileStorageService [http-nio-8080-exec-5] listFilesInStorage - results size is 2
+2020-10-19 21:03:50,109 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'

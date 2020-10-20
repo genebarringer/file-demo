@@ -1,0 +1,7 @@
+HOST localhost 12fc5742b69e 5053
+ISV genilogix binary=genilogix.set port=64626
+LICENSE genilogix qc12_53.eapprove 1.0 permanent 20 hostid=ANY 
+  customer="GE Healthcare HCIT" soft_limit=19
+  options=ExpDate=27-Oct-2020,WarnDate=13-Oct-2020,MaxUser=20
+  _ck=ad4f82a55f sig="60P0450XYJXP3QS69ARSRT25Y0TJ79XRES9N4GG22G98MXJ3
+  RQC0MMXB5B1VWWH3MS52M6PFRG"
