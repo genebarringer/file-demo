@@ -33,7 +33,7 @@ public class FileController {
 
     @GetMapping("/listAllFiles")
     public List<LicenseFile> listAllFiles(HttpServletRequest request) {
-
+    logger.info("listAllFiles - start");
         return fileStorageService.listFilesInStorage();
        // return null;
     }
