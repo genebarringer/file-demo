@@ -101,6 +101,7 @@ logger.trace("listFilesInStorage - There are " + files.length + " files");
 
             // Copy file to the target location (Replacing existing file with the same name)
             Path targetLocation = this.fileStorageLocation.resolve(fileName);
+            logger.trace("storeFile - targetLocation: " + targetLocation.getFileName());
             Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
 
             return fileName;
