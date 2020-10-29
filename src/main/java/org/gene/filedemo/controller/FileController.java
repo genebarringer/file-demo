@@ -42,6 +42,7 @@ public class FileController {
 
     @PostMapping("/uploadFile")
     public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
+        logger.info("uploadFile - start");
         String fileName = fileStorageService.storeFile(file);
         logger.trace("uploadFile - fileName: " + fileName.toString());
 
